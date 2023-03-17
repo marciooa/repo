@@ -21,7 +21,7 @@ with open("Style.css") as f:
 	st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 ##################### autenticacao
-ef check_password():
+def check_password():
     """Returns `True` if the user had a correct password."""
 
     def password_entered():

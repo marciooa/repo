@@ -17,7 +17,8 @@ st.set_page_config(layout="wide", page_title='QuantMind', page_icon='favicon.ico
 
 st.image("logo.png", width=150)
 
-st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
+with open("Style.css") as f:
+	st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 ##################### autenticacao
 def check_password():

@@ -6,3 +6,4 @@ streamlit==1.19.0
 streamlit_extras==0.2.6
 ta==0.10.2
 yfinance==0.2.9
+streamlit_authenticator

@@ -1,0 +1,8 @@
+numpy==
+pandas==
+pandas_datareader==
+scipy==
+streamlit==
+streamlit_extras==
+ta==
+yfinance==

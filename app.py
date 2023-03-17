@@ -17,10 +17,11 @@ st.set_page_config(layout="wide", page_title='QuantMind', page_icon='favicon.ico
 
 st.image("logo.png", width=150)
 
-with open("Style.css") as f:
-	st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 
 ##################### autenticacao
+
+
 
 ##################################333
 df= pd.read_csv("tabela.csv")
@@ -2403,6 +2404,9 @@ st.line_chart(rsi)
 st.header('Isenção de Resposabilidade Legal:')
 st.warning("As informações fornecidas pela QUANTI MIND e não devem ser interpretadas como uma oferta ou solicitação para a compra ou venda de qualquer instrumento financeiro ou o fornecimento de uma oferta para fornecer serviços de investimento. As informações, opiniões e comentários não se enquadram no escopo dos serviços de assessoria de investimentos. Os serviços de assessoria de investimento são prestados de acordo com o contrato de assessoria de investimento, celebrado entre as instituições intermediárias, sociedades gestoras de carteiras, bancos de investimento e os clientes. As opiniões e comentários refletem o resultado de simulações de modelos matemáticos. As informações discutidas neste relatório podem envolver riscos significativos, podem não ter liquidez e podem não ser adequados para todos os investidores. Portanto, tomar decisões com relação às informações deste relatório pode causar resultados inadequados e perdas financeiras.", icon="⚠️")
 
+
+
+        
 
 
 

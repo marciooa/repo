@@ -1,8 +1,8 @@
-numpy==lastest
-pandas==lastest
-pandas_datareader==lastest
-scipy==lastest
-streamlit==lastest
-streamlit_extras==lastest
-ta==lastest
-yfinance==lastest
+numpy==1.23.0
+pandas==1.4.4
+pandas_datareader==0.10.0
+scipy==1.9.3
+streamlit==1.19.0
+streamlit_extras==0.2.6
+ta==0.10.2
+yfinance==0.2.9

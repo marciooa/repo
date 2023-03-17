@@ -21,21 +21,11 @@ with open("Style.css") as f:
 	st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 ##################### autenticacao
+# Verbose version
+my_db.connect(username=st.secrets.db_credentials.username, password=st.secrets.db_credentials.password)
 
-# Everything is accessible via the st.secrets dict:
-
-st.write("DB username:", st.secrets["db_username"])
-st.write("DB password:", st.secrets["db_password"])
-st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
-
-# And the root-level secrets are also accessible as environment variables:
-
-import os
-
-st.write(
-    "Has environment variables been set:",
-    os.environ["db_username"] == st.secrets["db_username"],
-)
+# Far more compact version!
+my_db.connect(**st.secrets.db_credentials)
 
 
 ##################################333

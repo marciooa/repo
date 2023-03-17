@@ -21,17 +21,17 @@ with open("Style.css") as f:
 	st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 ##################### autenticacao
-##################### autenticacao
-def check_password():
+ef check_password():
     """Returns `True` if the user had a correct password."""
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
-        if (
-            st.session_state["username"] in st.secrets["passwords"]
-            and st.session_state["password"]
-            == st.secrets["passwords"][st.session_state["username"]]
-        ):
+        user = authenticate(
+            username=st.session_state['username'], 
+            password=st.session_state['password']
+            )
+        
+        if (user is not None):
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # don't store username + password
             del st.session_state["username"]
@@ -56,8 +56,6 @@ def check_password():
     else:
         # Password correct.
         return True
-
-if check_password():
 
 
 ##################################333

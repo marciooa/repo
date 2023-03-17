@@ -1,8 +1,8 @@
-numpy==*
-pandas==*
-pandas_datareader==*
-scipy==*
-streamlit==
-streamlit_extras==*
-ta==*
-yfinance==*
+numpy==lastest
+pandas==lastest
+pandas_datareader==lastest
+scipy==lastest
+streamlit==lastest
+streamlit_extras==lastest
+ta==lastest
+yfinance==lastest

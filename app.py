@@ -27,18 +27,17 @@ def check_password():
     def password_entered():
         """Checks whether a password entered by the user is correct."""
         user = authenticate(
-            username=st.session_state['username'], 
-            password=st.session_state['password']
-            )
-        
-        if (user is not None):
+            username=st.secrets["username"], password=st.secrets["password"]
+        )
+
+        if user is not None:
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # don't store username + password
             del st.session_state["username"]
         else:
             st.session_state["password_correct"] = False
 
-    if "password_correct" not in st.session_state:
+    if "password_correct" not in st.secrets:
         # First run, show inputs for username + password.
         st.text_input("Username", on_change=password_entered, key="username")
         st.text_input(
@@ -56,6 +55,9 @@ def check_password():
     else:
         # Password correct.
         return True
+
+
+if check_password():
 
 
 ##################################333
